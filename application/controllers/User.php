@@ -70,6 +70,8 @@ class User extends Tes_Controller
     {
         $id = $this->access_tes->get_user_id();
         $data['user'] = $this->db->query("SELECT * FROM cc_user WHERE user_id='$id'")->result();
+        // $updatedUser = $this->db->query("SELECT * FROM cc_user WHERE user_id='$id'")->result();
+        $updatedUser = json_decode(json_encode($data['user']), true);
 
         $nama_user = $this->input->post('nama_user');
         $password = $this->input->post('password');
@@ -111,7 +113,7 @@ class User extends Tes_Controller
                 $this->load->library('upload', $config);
         
                 if ($this->upload->do_upload('foto_user')) {
-                    $gambar_lama = $data['cc_user']['foto_user'];
+                    $gambar_lama = $updatedUser[0]['foto_user'];
                     if($gambar_lama != 'default-avatar.png' && file_exists(FCPATH . 'assets/img/img_user/' . $gambar_lama)) {
                         unlink(FCPATH . 'assets/img/img_user/' . $gambar_lama); }
                     $data_baru['foto_user'] = $this->upload->data('file_name');
