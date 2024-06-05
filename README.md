@@ -2,7 +2,14 @@
 
 http://localhost/codechamp/index.php/manager
 
-- Email : admin
+- Username : admin
+- Password : 1234
+
+## Tutor:
+
+http://localhost/codechamp/index.php/manager
+
+- Username : tutor
 - Password : 1234
 
 ## User:
