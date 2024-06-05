@@ -32,7 +32,7 @@
 				<?php
 			}
 		?>
-        <div class="box box-success box-solid">
+        <div class="box box-primary box-solid">
             <div class="box-header with-border">
                 <h3 class="box-title">Daftar Materi</h3>
             </div><!-- /.box-header -->

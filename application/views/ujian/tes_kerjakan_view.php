@@ -2,7 +2,7 @@
 	<!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Tes : <?php if(!empty($tes_name)){ echo $tes_name; } ?>
+            <?php if(!empty($tes_name)){ echo $tes_name; } ?>
         </h1>
         <div class="breadcrumb">
             <img src="<?php echo base_url(); ?>public/images/zoom.png" style="cursor: pointer;" height="20" onclick="zoomnormal()" title="Klik ukuran font normal" />&nbsp;&nbsp;
@@ -49,7 +49,7 @@
                     <p class="help-block">Soal yang sudah dijawab akan berwarna Biru.</p>
                 </div><!-- /.box-body -->
                 <div class="box-footer">
-                    <button class="btn btn-default pull-right" id="btn-hentikan">Hentikan Tes</button>
+                    <button class="btn btn-default pull-right" id="btn-hentikan">Selesaikan Kuis</button>
                 </div>
             </div><!-- /.box -->
         </div>
@@ -61,20 +61,20 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button class="close" type="button" data-dismiss="modal">&times;</button>
-                    <div id="trx-judul">Konfirmasi Hentikan Tes</div>
+                    <div id="trx-judul">Konfirmasi Hentikan Kuis</div>
                 </div>
                 <div class="modal-body" >
                     <div class="row-fluid">
                         <div class="box-body">
                             <div id="form-pesan"></div>
                             <div class="callout callout-info">
-                                <p>Apakah anda yakin mengakhiri mata uji ini ?
-								<br />Jawaban Tes yang sudah selesai tidak dapat diubah.
+                                <p>Apakah anda yakin mengakhiri kuis ini ?
+								<br />Jawaban Kuis yang sudah selesai tidak dapat diubah.
 								</p>
 								
                             </div>
                             <div class="form-group">
-                                <label>Nama Tes</label>
+                                <label>Nama Materi</label>
                                 <input type="hidden" name="hentikan-tes-id" id="hentikan-tes-id" >
                                 <input type="hidden" name="hentikan-tes-user-id" id="hentikan-tes-user-id" >
                                 <input type="text" class="form-control" id="hentikan-tes-nama" name="hentikan-tes-nama" readonly>
@@ -87,7 +87,7 @@
                             <div class="form-group">
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" id="hentikan-centang" name="hentikan-centang" value="1"> Centang dan klik tombol Hentikan Tes.
+                                        <input type="checkbox" id="hentikan-centang" name="hentikan-centang" value="1"> Centang dan klik tombol Selesaikan Kuis.
                                     </label>
                                 </div>
                             </div>
@@ -95,8 +95,8 @@
                     </div>
                 </div>
 				<div class="box-footer">
-					<button type="submit" id="tambah-simpan" class="btn btn-primary">Hentikan Tes</button>
-					<a href="#" class="btn btn-default" data-dismiss="modal">Close</a>
+					<button type="submit" id="tambah-simpan" class="btn btn-primary">Selesaikan Kuis</button>
+					<a href="#" class="btn btn-default" data-dismiss="modal">Batal</a>
 				</div>
             </div>
         </div>
