@@ -1703,7 +1703,7 @@ a:focus {
   border-color: #d2d6de;
 }
 .form-control:focus {
-  border-color: #3c8dbc !important;
+  border-color: #5548ed !important;
   box-shadow: none;
 }
 .form-control::-moz-placeholder {
@@ -2757,13 +2757,13 @@ a:focus {
   background-color: #e7e7e7 !important;
 }
 .btn-primary {
-  background-color: #3c8dbc;
-  border-color: #367fa9;
+  background-color: #5548ed;
+  border-color: #1c1476;
 }
 .btn-primary:hover,
 .btn-primary:active,
 .btn-primary.hover {
-  background-color: #367fa9;
+  background-color: rgba(85, 72, 237, 0.8);
 }
 .btn-success {
   background-color: #00a65a;
