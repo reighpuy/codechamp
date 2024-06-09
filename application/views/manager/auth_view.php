@@ -1,52 +1,46 @@
 <div class="container">
-<!-- Content Header (Page header) -->
-<section class="content-header">
-    <h1>
-        <small> Halaman Login Administrator.</small>
-    </h1>
-</section>
+	<!-- Content Header (Page header) -->
+    <section class="content-header">
+    	<h1>
+            <small>Halaman Login Tutor</small>
+        </h1>
+	</section>
 
-<!-- Main content -->
-<section class="content">
-    <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-6">
-            <!-- Horizontal Form -->
-            <div class="login-logo">
-                <b>Login Admin</b>
-            </div>
-            <div class="box box-default">
-                <div class="box-header with-border">
-                    <!-- <h3 class="box-title">Login Operator</h3> -->
-                </div><!-- /.box-header -->
-                <!-- form start -->
-                <?php echo form_open('auth/login','id="form-login" class="form-horizontal"')?>
-                    <div class="box-body">
-						<div id="form-pesan">
-						</div>
-						
-                        <div class="form-group">
-                            <label class="col-sm-4 control-label">Username</label>
-                            <div class="col-sm-8">
-                                <input type="text" class="form-control" id="username" name="username" placeholder="Username" />
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-4 control-label">Password</label>
-                            <div class="col-sm-8">
-                                <input type="password" class="form-control" id="password" name="password" placeholder="Password"/>
-                            </div>
-                        </div>
-                    </div><!-- /.box-body -->
-                    <div class="box-footer">
-                        <button type="submit" id="btn-login" class="btn btn-info pull-right" >Login</button>
-                    </div><!-- /.box-footer -->
-                </form>
-            </div><!-- /.box -->
-        <div class="col-md-3"></div>
-    </div>
-</section><!-- /.content -->
-</div>
+	<!-- Main content -->
+    <section class="content">
+    	<div class="row">
+    	<?php echo form_open('auth/login','id="form-login" class="form-horizontal"')?>
+    	</div>
+    	<div class="row">
+    		<div class="login-box">
+    			<div class="login-logo">
+        			<b>Login Tutor</b>
+      			</div><!-- /.login-logo -->
+      			<div class="login-box-body">
+        			<p class="login-box-msg">Masukkan Email dan Password yang sudah terdaftar</p>
+                <div id="form-pesan"></div>
+          			<div class="form-group has-feedback">
+            			<input type="text" id="username" autocomplete="off" name="username" class="form-control" placeholder="Masukkan Username"/>
+          			</div>
+          		<div class="form-group has-feedback">
+            		<input type="password" id="password" autocomplete="off" name="password" class="form-control" placeholder="Masukkan Password"/>
+          		</div>
+          		<div class="row">
+		            <!-- <div class="col-xs-8">
+						<div class="checkbox icheck">
+							<label>
+							<input type="checkbox" id="show-password"> Perlihatkan Password
+							</label>
+						</div>    
+		            </div> -->
+		            <div class="col-xs-12">
+		              	<center><button type="submit" class="btn btn-primary btn-block">Login</button></center>
+		            </div><!-- /.col -->
+	          	</div>
+    		</div><!-- /.login-box -->
+    	</div>
+    </section><!-- /.content -->
+</div><!-- /.container -->
 
     <div class="modal" id="modal-proses" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
 		<div class="modal-dialog">

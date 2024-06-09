@@ -26,7 +26,7 @@ class Laporan_rekap_hasil extends Member_Controller {
 		$data['kode_menu'] = $this->kode_menu;
         $data['url'] = $this->url;
 
-        $email = $this->access->get_email();
+        $email = $this->access->get_username();
 		$user_id = $this->users_model->get_login_info($email)->id;
 		
 		$tanggal_awal = date('Y-m-d', strtotime('- 1 days'));

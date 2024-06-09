@@ -26,7 +26,7 @@ class Laporan_analisis_butir_soal extends Member_Controller {
 		$data['kode_menu'] = $this->kode_menu;
         $data['url'] = $this->url;
 
-        $email = $this->access->get_email();
+        $email = $this->access->get_username();
 		$user_id = $this->users_model->get_login_info($email)->id;
 
         $query_group = $this->user_grup_model->get_group();

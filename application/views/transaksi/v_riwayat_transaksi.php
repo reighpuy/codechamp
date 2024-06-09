@@ -27,6 +27,7 @@
                             <th width="20%">Tanggal Berakhir</th>
                             <th width="20%">Status Transaksi</th>
                             <th width="20%">Bukti Pembayaran</th>
+                            <th>Bukti Berlangganan</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -42,12 +43,15 @@
                                 <?php if ($trans->status_transaksi == 1) { ?>
                                     <td>Belum Dibayar</td>
                                     <td><a href="<?= site_url('berlangganan/konfirmasi_pembayaran/') . $trans->id_transaksi; ?>" class="btn btn-primary btn-xs">Kirim Bukti Pembayaran</a></td>
+                                    <td>-</td>
                                 <?php } else if ($trans->status_transaksi == 2) { ?>
                                     <td>Menunggu Konfirmasi</td>
                                     <td><a href="<?= base_url('assets/img/bukti_pembayaran/') . $trans->bukti_pembayaran; ?>" target="_blank"><img src="<?= base_url('assets/img/bukti_pembayaran/') . $trans->bukti_pembayaran; ?>" alt="Bukti Pembayaran" width="100" height="100"></a></td>
+                                    <td>-</td>
                                 <?php } else { ?>
                                     <td>Transaksi Selesai</td>
                                     <td><a href="<?= base_url('assets/img/bukti_pembayaran/') . $trans->bukti_pembayaran; ?>" target="_blank"><img src="<?= base_url('assets/img/bukti_pembayaran/') . $trans->bukti_pembayaran; ?>" alt="Bukti Pembayaran" width="100" height="100"></a></td>
+                                    <td><a href="<?= site_url('berlangganan/pembayaran_print/') . $trans->id_transaksi; ?>" target="_blank" class="btn btn-primary btn-xs">Cetak Bukti Berlangganan</a></td>
                                 <?php } ?>
                             </tr>
                         <?php endforeach; ?>

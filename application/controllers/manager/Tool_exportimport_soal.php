@@ -76,18 +76,8 @@ class Tool_exportimport_soal extends Member_Controller {
 				}else{
 					$soal_kunci = '\''.$soal->soal_kunci.'\'';
 				}
-				if(empty($soal->soal_audio)){
-					$soal_audio = 'NULL';
-				}else{
-					$soal_audio = '\''.$soal->soal_audio.'\'';
-				}
-				if(empty($soal->soal_timer)){
-					$soal_timer = 'NULL';
-				}else{
-					$soal_timer = '\''.$soal->soal_timer.'\'';
-				}
 
-				$sql = $sql.'INSERT INTO `soal` (`soal_id`, `soal_topik_id`, `soal_detail`, `soal_tipe`, `soal_kunci`, `soal_difficulty`, `soal_aktif`, `soal_audio`, `soal_audio_play`, `soal_timer`, `soal_inline_answers`, `soal_auto_next`) VALUES (\''.$soal->soal_id.'\', \''.$soal->soal_topik_id.'\', \''.addslashes($soal->soal_detail).'\', '.$soal->soal_tipe.', '.$soal_kunci.', '.$soal->soal_difficulty.', '.$soal->soal_aktif.', '.$soal_audio.', '.$soal->soal_audio_play.', '.$soal_timer.', '.$soal->soal_inline_answers.', '.$soal->soal_auto_next.')'.$delimiter;
+				$sql = $sql.'INSERT INTO `soal` (`soal_id`, `soal_topik_id`, `soal_detail`, `soal_tipe`, `soal_kunci`, `soal_difficulty`, `soal_aktif`, `soal_inline_answers`, `soal_auto_next`) VALUES (\''.$soal->soal_id.'\', \''.$soal->soal_topik_id.'\', \''.addslashes($soal->soal_detail).'\', '.$soal->soal_tipe.', '.$soal_kunci.', '.$soal->soal_difficulty.', '.$soal->soal_inline_answers.', '.$soal->soal_auto_next.')'.$delimiter;
 			}			
 		}
 

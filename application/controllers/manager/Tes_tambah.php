@@ -118,27 +118,30 @@ class Tes_tambah extends Member_Controller {
             $data['tes_score_right'] = $this->input->post('tambah-poin', true);
             $data['tes_score_wrong'] = $this->input->post('tambah-poin-salah', true);
             $data['tes_score_unanswered'] = $this->input->post('tambah-poin-kosong', true);
+            $data['tes_results_to_users'] = '1';
+            $data['tes_detail_to_users'] = '1';
+            $data['tes_token'] = '0';
 
-            $tunjukkan_hasil = $this->input->post('tambah-tunjukkan-hasil', true);
-            if(!empty($tunjukkan_hasil)){
-            	$data['tes_results_to_users'] = $tunjukkan_hasil;
-            }else{
-            	$data['tes_results_to_users'] = '0';
-            }
+            // $tunjukkan_hasil = $this->input->post('tambah-tunjukkan-hasil', true);
+            // if(!empty($tunjukkan_hasil)){
+            // 	$data['tes_results_to_users'] = $tunjukkan_hasil;
+            // }else{
+            // 	$data['tes_results_to_users'] = '0';
+            // }
 
-            $detail_hasil = $this->input->post('tambah-detail-hasil', true);
-            if(!empty($detail_hasil)){
-                $data['tes_detail_to_users'] = $detail_hasil;
-            }else{
-                $data['tes_detail_to_users'] = '0';
-            }
+            // $detail_hasil = $this->input->post('tambah-detail-hasil', true);
+            // if(!empty($detail_hasil)){
+            //     $data['tes_detail_to_users'] = $detail_hasil;
+            // }else{
+            //     $data['tes_detail_to_users'] = '0';
+            // }
             
-            $token = $this->input->post('tambah-token', true);
-            if(!empty($token)){
-            	$data['tes_token'] = $token;
-            }else{
-            	$data['tes_token'] = '0';
-            }
+            // $token = $this->input->post('tambah-token', true);
+            // if(!empty($token)){
+            // 	$data['tes_token'] = $token;
+            // }else{
+            // 	$data['tes_token'] = '0';
+            // }
 
             $cek_nama = 1;
             if(!empty($nama_lama)){

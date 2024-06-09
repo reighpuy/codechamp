@@ -54,45 +54,25 @@
         	<dl>
         		<dt>Data Materi</dt>
                 <dd>
-                	Kelompok Data Modul digunakan untuk menambah modul, topik, dan soal. Serta digunakan untuk mengatur file dengan memanfaatkan File Manager.
+                	Kelompok Data Materi digunakan untuk menambah kategori materi dan soal materi.
                 	<ol>
-                		<li>Modul</li>
-                		<li>Topik</li>
-                		<li>Soal</li>
+                		<li>Kategori Materi</li>
+                		<li>Soal Materi</li>
                 		<li>Import Soal Word</li>
 						<li>Import Soal Spreadsheet</li>
-                		<li>Daftar Soal</li>
+                		<li>Daftar Soal Materi</li>
                 		<li>File Manager</li>
                 	</ol>
                 </dd>
-                <dt>Data Peserta</dt>
+                <dt>Data Pengguna</dt>
                 <dd>
-                	Kelompok Data Peserta digunakan untuk mengatur Peserta, dan Group.
+                	Kelompok Data Pengguna digunakan untuk mengatur Pengguna, dan Tipe-nya.
                 	<ol>
                 		<li>Daftar Group</li>
                 		<li>Daftar Peserta</li>
                 		<li>Import Data Peserta</li>
 						<li>Cetak Kartu</li>
                 	</ol>
-                <dt>Data Tes</dt>
-                <dd>
-                	Kelompok Data Tes digunakan untuk mengatur Tes, mengevaluasi jawaban essay, dan melihat Hasil tes.
-                	<ol>
-                		<li>Tambah Tes</li>
-                		<li>Daftar Tes</li>
-                		<li>Evaluasi Tes</li>
-                		<li>Hasil tes</li>
-                		<li>Token</li>
-                	</ol>
-                </dd>
-				<dt>Laporan</dt>
-                <dd>
-                	Laporan digunakan untuk menampilkan analisis butir soal, dan rekap hasil tes.
-                	<ol>
-                		<li>Analisis Butir Soal</li>
-                        <li>Rekap Hasil Tes</li>
-                	</ol>
-                </dd>
                 <dt>Tool</dt>
                 <dd>
                     Kelompok Tool digunakan untuk membackup database, file pedukung soal, dan Export Import Data Soal

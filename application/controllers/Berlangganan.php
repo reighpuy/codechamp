@@ -90,6 +90,24 @@ class Berlangganan extends Tes_Controller
 
 	}
 
+    function pembayaran_print()
+    {
+        $email = $this->access_tes->get_email();
+        $query_user = $this->user_model->get_by_kolom_limit('email_user', $email, 1);
+		if($query_user->num_rows()>0){
+			$id = $query_user->row()->user_id;
+		}
+
+        $isi['nama'] = $this->access_tes->get_nama();
+        $isi['email'] = $this->access_tes->get_email();
+
+        $isi['data_transaksi'] = $this->user_model->get_transaksi_user($id);
+
+        $isi['judul'] = 'Bukti Berlangganan';
+        $this->template->display_user('transaksi'.'/v_berlangganan_print', 'Bukti Berlangganan', $isi);
+        // $this->load->view('transaksi/v_berlangganan_print', $isi);
+    }
+
     public function konfirmasi_pembayaran($id)
     {
 

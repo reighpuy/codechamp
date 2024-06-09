@@ -67,7 +67,7 @@
                                 <p class="help-block">Poin untuk jawaban kosong</p>
                             </div>
                         </div>
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <label class="col-sm-3 control-label">Tunjukkan Hasil</label>
                             <div class="col-sm-9">
                                 <input type="checkbox" name="tambah-tunjukkan-hasil" id="tambah-tunjukkan-hasil" value="1" checked>
@@ -87,7 +87,7 @@
                                 <input type="checkbox" name="tambah-token" id="tambah-token" value="1" >
                                 <p class="help-block">Saat awal tes, user memasukkan Token dari operator</p>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="box-footer">
@@ -243,21 +243,21 @@
                 $('#tambah-poin').val(data.poin);
                 $('#tambah-poin-kosong').val(data.poin_kosong);
                 $('#tambah-poin-salah').val(data.poin_salah);
-                if(data.tunjukkan_hasil==1){
-                    $('#tambah-tunjukkan-hasil').prop("checked", true);
-                }else{
-                    $('#tambah-tunjukkan-hasil').prop("checked", false);
-                }
-                if(data.detail_hasil==1){
-                    $('#tambah-detail-hasil').prop("checked", true);
-                }else{
-                    $('#tambah-detail-hasil').prop("checked", false);
-                }
-                if(data.token==1){
-                    $('#tambah-token').prop("checked", true);
-                }else{
-                    $('#tambah-token').prop("checked", false);
-                }
+                // if(data.tunjukkan_hasil==1){
+                //     $('#tambah-tunjukkan-hasil').prop("checked", true);
+                // }else{
+                //     $('#tambah-tunjukkan-hasil').prop("checked", false);
+                // }
+                // if(data.detail_hasil==1){
+                //     $('#tambah-detail-hasil').prop("checked", true);
+                // }else{
+                //     $('#tambah-detail-hasil').prop("checked", false);
+                // }
+                // if(data.token==1){
+                //     $('#tambah-token').prop("checked", true);
+                // }else{
+                //     $('#tambah-token').prop("checked", false);
+                // }
 
                 refresh_topik();
                 refresh_table();
