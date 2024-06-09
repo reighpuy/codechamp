@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 05, 2024 at 10:51 AM
+-- Generation Time: Jun 09, 2024 at 11:38 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.3.33
 
@@ -45,10 +45,10 @@ CREATE TABLE `cc_user` (
 
 INSERT INTO `cc_user` (`user_id`, `user_grup_id`, `password_user`, `email_user`, `user_regdate`, `nama_user`, `foto_user`, `user_level`, `exp_user`) VALUES
 (1, 2, '81dc9bdb52d04dc20036dbd8313ed055', 'd@gmail.com', '2018-01-11 04:38:27', 'Muhamad Khadaffy', 'hwang-yeji.jpg', 1, 0),
-(2, 1, '81dc9bdb52d04dc20036dbd8313ed055', 'elsa@gmail.com', '2024-06-02 07:04:34', 'Asyffa Elsa', 'default-avatar.png', 1, 0),
-(3, 1, '81dc9bdb52d04dc20036dbd8313ed055', 'kayla@gmail.com', '2024-06-04 06:36:06', 'Kayla Aulia', 'default-avatar.png', 1, 0),
-(4, 1, '81dc9bdb52d04dc20036dbd8313ed055', 'tyas@gmail.com', '2024-06-05 07:27:51', 'Adetyas Alfarizza', 'default-avatar.png', 1, 0),
-(5, 1, '81dc9bdb52d04dc20036dbd8313ed055', 'nanda@gmail.com', '2024-06-05 07:28:29', 'Nanda Nurvika', 'default-avatar.png', 1, 0);
+(2, 2, '81dc9bdb52d04dc20036dbd8313ed055', 'madit@gmail.com', '2024-06-02 07:04:34', 'Muhammad Aditya', 'default-avatar.png', 1, 0),
+(3, 1, '81dc9bdb52d04dc20036dbd8313ed055', 'rani@gmail.com', '2024-06-04 06:36:06', 'Rani Wahyuni', 'default-avatar.png', 1, 0),
+(4, 1, '81dc9bdb52d04dc20036dbd8313ed055', 'azizah@gmail.com', '2024-06-05 07:27:51', 'Azizah Tri Kusumadewi', 'default-avatar.png', 1, 0),
+(5, 1, '81dc9bdb52d04dc20036dbd8313ed055', 'sisca@gmail.com', '2024-06-05 07:28:29', 'Sisca Lolita Amalia', 'default-avatar.png', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -104,7 +104,67 @@ INSERT INTO `jawaban` (`jawaban_id`, `jawaban_soal_id`, `jawaban_detail`, `jawab
 (33, 10, '<p>git log</p>\r\n', 1, 1),
 (34, 10, '<p>git show</p>\r\n', 0, 1),
 (35, 10, '<p>git status</p>\r\n', 0, 1),
-(36, 10, '<p>git history</p>\r\n', 0, 1);
+(36, 10, '<p>git history</p>\r\n', 0, 1),
+(37, 11, '<p>Cascading Style Sheets</p>\r\n', 1, 1),
+(38, 11, '<p>Computer Style Sheets</p>\r\n', 0, 1),
+(39, 11, '<p>Creative Style Sheets</p>\r\n', 0, 1),
+(40, 11, '<p>Colorful Style Sheets</p>\r\n', 0, 1),
+(41, 12, '<p>.class-name {}</p>\r\n', 1, 1),
+(42, 12, '<p>#class-name {}</p>\r\n', 0, 1),
+(43, 12, '<p>class-name {}</p>\r\n', 0, 1),
+(44, 12, '<p>@class-name {}</p>\r\n', 0, 1),
+(45, 13, '<p>color</p>\r\n', 1, 1),
+(46, 13, '<p>background-color</p>\r\n', 0, 1),
+(47, 13, '<p>font-color</p>\r\n', 0, 1),
+(48, 13, '<p>text-color</p>\r\n', 0, 1),
+(49, 14, '<p>Font</p>\r\n', 1, 1),
+(50, 14, '<p>Content</p>\r\n', 0, 1),
+(51, 14, '<p>Padding</p>\r\n', 0, 1),
+(52, 14, '<p>Border</p>\r\n', 0, 1),
+(53, 15, '<p>Elemen dihapus dari aliran dokumen normal.</p>\r\n', 1, 1),
+(54, 15, '<p>Elemen tetap pada posisi aslinya.</p>\r\n', 0, 1),
+(55, 15, '<p>Elemen bergeser relatif terhadap posisi aslinya.</p>\r\n', 0, 1),
+(56, 15, '<p>Elemen selalu berada di atas elemen lain.</p>\r\n', 0, 1),
+(57, 16, '<p>Mengatur tata letak yang fleksibel dan responsif</p>\r\n', 1, 1),
+(58, 16, '<p>Mengatur tata letak grid</p>\r\n', 0, 1),
+(59, 16, '<p>Mengatur tipografi</p>\r\n', 0, 1),
+(60, 16, '<p>Mengatur animasi dan transisi</p>\r\n', 0, 1),
+(61, 17, '<p>@media screen and (min-width: 600px) { body { background-color: red; } }</p>\r\n', 1, 1),
+(62, 17, '<p>@media (min-width: 600px) { body { background-color: red; } }</p>\r\n', 0, 1),
+(63, 17, '<p>@media only screen (min-width: 600px) { body { background-color: red; } }</p>\r\n', 0, 1),
+(64, 17, '<p>@media width: 600px { body { background-color: red; } }</p>\r\n', 0, 1),
+(65, 18, '<p>Pseudo-class menentukan keadaan khusus elemen, pseudo-element digunakan untuk menata bagian tertentu dari elemen</p>\r\n', 1, 1),
+(66, 18, '<p>Pseudo-class digunakan untuk menata bagian tertentu dari elemen, pseudo-element menentukan keadaan khusus elemen</p>\r\n', 0, 1),
+(67, 18, '<p>Pseudo-class dan pseudo-element tidak ada bedanya</p>\r\n', 0, 1),
+(68, 18, '<p>Pseudo-class dan pseudo-element hanya dapat digunakan dalam selektor ID</p>\r\n', 0, 1),
+(69, 19, '<p>background-color: red;</p>\r\n', 1, 1),
+(70, 19, '<p>background: #ff0000;</p>\r\n', 0, 1),
+(71, 19, '<p>color: red;</p>\r\n', 0, 1),
+(72, 19, '<p>bgcolor: red;</p>\r\n', 0, 1),
+(73, 20, '<p>color</p>\r\n', 1, 1),
+(74, 20, '<p>border</p>\r\n', 0, 1),
+(75, 20, '<p>margin</p>\r\n', 0, 1),
+(76, 20, '<p>padding</p>\r\n', 0, 1),
+(77, 21, '<p>PHP: Hypertext Preprocessor</p>\r\n', 1, 1),
+(78, 21, '<p>Personal Home Page</p>\r\n', 0, 1),
+(79, 21, '<p>Private Home Page</p>\r\n', 0, 1),
+(80, 21, '<p>Professional Home Page</p>\r\n', 0, 1),
+(81, 22, '<p>Semua jawaban benar</p>\r\n', 1, 1),
+(82, 22, '<p>echo &quot;Hello, World!&quot;;</p>\r\n', 0, 1),
+(83, 22, '<p>print &quot;Hello, World!&quot;;</p>\r\n', 0, 1),
+(84, 22, '<p>echo(&quot;Hello, World!&quot;);</p>\r\n', 0, 1),
+(85, 23, '<p>Semua jawaban benar</p>\r\n', 1, 1),
+(86, 23, '<p>include()</p>\r\n', 0, 1),
+(87, 23, '<p>require()</p>\r\n', 0, 1),
+(88, 23, '<p>include_once()</p>\r\n', 0, 1),
+(89, 24, '<p>$</p>\r\n', 1, 1),
+(90, 24, '<p>&amp;</p>\r\n', 0, 1),
+(91, 24, '<p>%</p>\r\n', 0, 1),
+(92, 24, '<p>@</p>\r\n', 0, 1),
+(93, 25, '<p>0</p>\r\n', 1, 1),
+(94, 25, '<p>1</p>\r\n', 0, 1),
+(95, 25, '<p>2</p>\r\n', 0, 1),
+(96, 25, '<p>5</p>\r\n', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -167,17 +227,32 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
-('181tolk0v0h5lrdqh67853vcv19ghbf7', '::1', 1717575985, 0x5f5f63695f6c6173745f726567656e65726174657c693a313731373537353932333b),
-('2712o9l1eo69uf4jclhedmkv7dv960mq', '::1', 1717573670, 0x5f5f63695f6c6173745f726567656e65726174657c693a313731373537333637303b757365725f69647c733a313a2231223b757365725f6578707c733a313a2230223b757365725f677275705f69647c733a313a2232223b7465735f757365725f69647c733a31313a226440676d61696c2e636f6d223b7465735f6e616d617c733a31363a224d7568616d6164204b68616461666679223b7465735f67726f75707c733a31323a224265726c616e6767616e616e223b7465735f67726f75705f69647c733a313a2232223b70617373776f72645f757365727c733a33323a223831646339626462353264303464633230303336646264383331336564303535223b656d61696c5f757365727c733a31313a226440676d61696c2e636f6d223b757365725f726567646174657c733a31393a22323031382d30312d31312031313a33383a3237223b6e616d615f757365727c733a31363a224d7568616d6164204b68616461666679223b666f746f5f757365727c733a31343a226877616e672d79656a692e6a7067223b757365725f6c6576656c7c733a313a2231223b6578705f757365727c733a313a2230223b),
-('3ll4hsap1mc03qnfd67g1c79vpluavas', '::1', 1717572767, 0x5f5f63695f6c6173745f726567656e65726174657c693a313731373537323736373b757365725f69647c733a313a2231223b757365725f6578707c733a333a22323030223b757365725f677275705f69647c733a313a2232223b7465735f757365725f69647c733a31313a226440676d61696c2e636f6d223b7465735f6e616d617c733a31363a224d7568616d6164204b68616461666679223b7465735f67726f75707c733a31323a224265726c616e6767616e616e223b7465735f67726f75705f69647c733a313a2232223b),
-('6d9p3lmj3tsfnm3u7oklbp8n1vra7ufv', '::1', 1717572455, 0x5f5f63695f6c6173745f726567656e65726174657c693a313731373537323435353b757365725f69647c733a313a2231223b757365725f6578707c733a333a22323030223b757365725f677275705f69647c733a313a2232223b),
-('6hj1060qe4i2lk57tf23mj9g04btaqgc', '::1', 1717572590, 0x5f5f63695f6c6173745f726567656e65726174657c693a313731373537323539303b757365725f69647c733a353a2261646d696e223b6e616d617c733a31353a224d7568616d6164204b686461666679223b6c6576656c7c733a353a2261646d696e223b),
-('9u3sl03hb253h84r8tjkobt945rka70t', '::1', 1717573996, 0x5f5f63695f6c6173745f726567656e65726174657c693a313731373537333937363b757365725f69647c733a313a2231223b757365725f6578707c733a313a2230223b757365725f677275705f69647c733a313a2232223b70617373776f72645f757365727c733a33323a223831646339626462353264303464633230303336646264383331336564303535223b656d61696c5f757365727c733a31313a226440676d61696c2e636f6d223b757365725f726567646174657c733a31393a22323031382d30312d31312031313a33383a3237223b6e616d615f757365727c733a31363a224d7568616d6164204b68616461666679223b666f746f5f757365727c733a31343a226877616e672d79656a692e6a7067223b757365725f6c6576656c7c733a313a2231223b6578705f757365727c733a313a2230223b),
-('dls3k9hntjie6rnobukr0dfq5eui7a21', '::1', 1717572122, 0x5f5f63695f6c6173745f726567656e65726174657c693a313731373537323132323b),
-('hupe4reav2bneuvsb75gbd34mlfdphqj', '::1', 1717574012, 0x5f5f63695f6c6173745f726567656e65726174657c693a313731373537343031323b757365725f69647c733a353a2261646d696e223b6e616d617c733a31353a224d7568616d6164204b686461666679223b6c6576656c7c733a353a2261646d696e223b),
-('icdvshtnamrrhmeac4lkahus1nva869c', '::1', 1717573976, 0x5f5f63695f6c6173745f726567656e65726174657c693a313731373537333937363b757365725f69647c733a313a2231223b757365725f6578707c733a313a2230223b757365725f677275705f69647c733a313a2232223b7465735f757365725f69647c733a31313a226440676d61696c2e636f6d223b7465735f6e616d617c733a31363a224d7568616d6164204b68616461666679223b7465735f67726f75707c733a31323a224265726c616e6767616e616e223b7465735f67726f75705f69647c733a313a2232223b70617373776f72645f757365727c733a33323a223831646339626462353264303464633230303336646264383331336564303535223b656d61696c5f757365727c733a31313a226440676d61696c2e636f6d223b757365725f726567646174657c733a31393a22323031382d30312d31312031313a33383a3237223b6e616d615f757365727c733a31363a224d7568616d6164204b68616461666679223b666f746f5f757365727c733a31343a226877616e672d79656a692e6a7067223b757365725f6c6576656c7c733a313a2231223b6578705f757365727c733a313a2230223b),
-('lindi18gv17sgluvoft55nesf8bj8ld5', '::1', 1717573069, 0x5f5f63695f6c6173745f726567656e65726174657c693a313731373537333036393b757365725f69647c733a313a2231223b757365725f6578707c733a313a2230223b757365725f677275705f69647c733a313a2232223b7465735f757365725f69647c733a31313a226440676d61696c2e636f6d223b7465735f6e616d617c733a31363a224d7568616d6164204b68616461666679223b7465735f67726f75707c733a31323a224265726c616e6767616e616e223b7465735f67726f75705f69647c733a313a2232223b),
-('omd3lt6kbiks0j8ssv3ghetqhh53j013', '::1', 1717574012, 0x5f5f63695f6c6173745f726567656e65726174657c693a313731373537343031323b);
+('00t3l21tbh3389atotpv9ec52bsseokg', '::1', 1717925880, 0x5f5f63695f6c6173745f726567656e65726174657c693a313731373932353539373b757365725f69647c733a313a2232223b757365725f6578707c733a313a2230223b757365725f677275705f69647c733a313a2232223b),
+('063olp0pi8s1o00gtc68rhms63theefj', '::1', 1717641171, 0x5f5f63695f6c6173745f726567656e65726174657c693a313731373634313137313b757365725f69647c733a313a2231223b757365725f6578707c733a313a2230223b757365725f677275705f69647c733a313a2232223b7465735f757365725f69647c733a31313a226440676d61696c2e636f6d223b7465735f6e616d617c733a31363a224d7568616d6164204b68616461666679223b7465735f67726f75707c733a31323a224265726c616e6767616e616e223b7465735f67726f75705f69647c733a313a2232223b),
+('1o1m9l0pi6dtbrametkvmtkp7crhup9l', '::1', 1717641455, 0x5f5f63695f6c6173745f726567656e65726174657c693a313731373634313435353b757365725f6578707c733a313a2230223b757365725f677275705f69647c733a313a2232223b757365725f69647c733a353a2261646d696e223b6e616d617c733a31353a224d7568616d6164204b686461666679223b6c6576656c7c733a353a2261646d696e223b),
+('21lvbr3jqbk1rbfb8k50fq11qes78rod', '::1', 1717923483, 0x5f5f63695f6c6173745f726567656e65726174657c693a313731373932333438333b757365725f69647c733a353a2261646d696e223b6e616d617c733a31353a224d7568616d6164204b686461666679223b6c6576656c7c733a353a2261646d696e223b),
+('3e2i5j2lg9o36pqh5m2fok9l2e80bsua', '::1', 1717640107, 0x5f5f63695f6c6173745f726567656e65726174657c693a313731373634303130373b757365725f69647c733a313a2232223b757365725f6578707c733a313a2230223b757365725f677275705f69647c733a313a2231223b7465735f757365725f69647c733a31343a22656c736140676d61696c2e636f6d223b7465735f6e616d617c733a31313a2241737966666120456c7361223b7465735f67726f75707c733a363a22477261746973223b7465735f67726f75705f69647c733a313a2231223b),
+('5hred111q6tirrppm241oepaaturp8if', '::1', 1717923603, 0x5f5f63695f6c6173745f726567656e65726174657c693a313731373932333630333b757365725f69647c733a353a227475746f72223b6e616d617c733a353a225475746f72223b6c6576656c7c733a31333a226f70657261746f722d736f616c223b),
+('5jfu8c9da6dro4q7riqplsrdgibj90tq', '::1', 1717923587, 0x5f5f63695f6c6173745f726567656e65726174657c693a313731373932333538373b757365725f69647c733a313a2232223b757365725f6578707c733a313a2230223b757365725f677275705f69647c733a313a2231223b7465735f757365725f69647c733a31343a22656c736140676d61696c2e636f6d223b7465735f6e616d617c733a31313a2241737966666120456c7361223b7465735f67726f75707c733a363a22477261746973223b7465735f67726f75705f69647c733a313a2231223b),
+('5qh912gofiaj03kpfsjqbs6tffaiomrl', '::1', 1717922850, 0x5f5f63695f6c6173745f726567656e65726174657c693a313731373932323835303b757365725f69647c733a353a2261646d696e223b6e616d617c733a31353a224d7568616d6164204b686461666679223b6c6576656c7c733a353a2261646d696e223b),
+('7lh2rejomt2l33chkh2hnqspfota3mgi', '::1', 1717640648, 0x5f5f63695f6c6173745f726567656e65726174657c693a313731373634303634383b757365725f69647c733a313a2232223b757365725f6578707c733a313a2230223b757365725f677275705f69647c733a313a2231223b),
+('81i1nbi72sm6ns4h75khi0orlkru1cl7', '::1', 1717642035, 0x5f5f63695f6c6173745f726567656e65726174657c693a313731373634313736353b757365725f6578707c733a313a2230223b757365725f677275705f69647c733a313a2232223b),
+('8as5abqq322ve84e4avtrm6jdkm8tvm0', '::1', 1717923178, 0x5f5f63695f6c6173745f726567656e65726174657c693a313731373932333137383b757365725f69647c733a353a227475746f72223b6e616d617c733a353a225475746f72223b6c6576656c7c733a31333a226f70657261746f722d736f616c223b),
+('bc1dn3r9fhaalfb2gcptm0a81vvbga8d', '::1', 1717641534, 0x5f5f63695f6c6173745f726567656e65726174657c693a313731373634313532393b757365725f69647c733a313a2231223b757365725f6578707c733a313a2230223b757365725f677275705f69647c733a313a2232223b),
+('db02vjrv2lgsiigofp3k1eu8svu2t8ev', '::1', 1717641150, 0x5f5f63695f6c6173745f726567656e65726174657c693a313731373634313135303b757365725f6578707c733a313a2230223b757365725f677275705f69647c733a313a2232223b757365725f69647c733a353a2261646d696e223b6e616d617c733a31353a224d7568616d6164204b686461666679223b6c6576656c7c733a353a2261646d696e223b),
+('fodormcsj5i3fohffd0jqaqofm2kg0qr', '::1', 1717922413, 0x5f5f63695f6c6173745f726567656e65726174657c693a313731373932323431333b757365725f69647c733a313a2232223b757365725f6578707c733a313a2230223b757365725f677275705f69647c733a313a2231223b7465735f757365725f69647c733a31343a22656c736140676d61696c2e636f6d223b7465735f6e616d617c733a31313a2241737966666120456c7361223b7465735f67726f75707c733a363a22477261746973223b7465735f67726f75705f69647c733a313a2231223b),
+('gcb2kk4om51tdci20u3p96t2hpt0gn00', '::1', 1717924351, 0x5f5f63695f6c6173745f726567656e65726174657c693a313731373932343335313b757365725f69647c733a313a2232223b757365725f6578707c733a313a2230223b757365725f677275705f69647c733a313a2231223b7465735f757365725f69647c733a31343a22656c736140676d61696c2e636f6d223b7465735f6e616d617c733a31313a2241737966666120456c7361223b7465735f67726f75707c733a363a22477261746973223b7465735f67726f75705f69647c733a313a2231223b),
+('h20rk10fflu5egdsc7js6di4u3ild21e', '::1', 1717925296, 0x5f5f63695f6c6173745f726567656e65726174657c693a313731373932353239363b757365725f69647c733a313a2232223b757365725f6578707c733a313a2230223b757365725f677275705f69647c733a313a2231223b7465735f757365725f69647c733a31343a22656c736140676d61696c2e636f6d223b7465735f6e616d617c733a31313a2241737966666120456c7361223b7465735f67726f75707c733a363a22477261746973223b7465735f67726f75705f69647c733a313a2231223b),
+('herubbknfe6e5tnjos6ektf4qc1djtuh', '::1', 1717641529, 0x5f5f63695f6c6173745f726567656e65726174657c693a313731373634313532393b757365725f69647c733a313a2231223b757365725f6578707c733a313a2230223b757365725f677275705f69647c733a313a2232223b7465735f757365725f69647c733a31313a226440676d61696c2e636f6d223b7465735f6e616d617c733a31363a224d7568616d6164204b68616461666679223b7465735f67726f75707c733a31323a224265726c616e6767616e616e223b7465735f67726f75705f69647c733a313a2232223b),
+('j7m55ktif5qrf62qrbafvc49hufjrvcc', '::1', 1717925597, 0x5f5f63695f6c6173745f726567656e65726174657c693a313731373932353539373b757365725f69647c733a313a2232223b757365725f6578707c733a313a2230223b757365725f677275705f69647c733a313a2232223b7465735f757365725f69647c733a31353a226d6164697440676d61696c2e636f6d223b7465735f6e616d617c733a31353a224d7568616d6d616420416469747961223b7465735f67726f75707c733a31323a224265726c616e6767616e616e223b7465735f67726f75705f69647c733a313a2232223b),
+('jpr7tfadfsocabkapcfeiocsescnu6kq', '::1', 1717924667, 0x5f5f63695f6c6173745f726567656e65726174657c693a313731373932343636373b757365725f69647c733a313a2232223b757365725f6578707c733a313a2230223b757365725f677275705f69647c733a313a2231223b7465735f757365725f69647c733a31343a22656c736140676d61696c2e636f6d223b7465735f6e616d617c733a31313a2241737966666120456c7361223b7465735f67726f75707c733a363a22477261746973223b7465735f67726f75705f69647c733a313a2231223b),
+('k7p0mvqsus55q6stqok5qv73jmr2gaei', '::1', 1717925750, 0x5f5f63695f6c6173745f726567656e65726174657c693a313731373932353735303b757365725f69647c733a353a2261646d696e223b6e616d617c733a31353a224d7568616d6164204b686461666679223b6c6576656c7c733a353a2261646d696e223b),
+('l9luo2qp77bc452m9mb1r02eckg67qlu', '::1', 1717640235, 0x5f5f63695f6c6173745f726567656e65726174657c693a313731373634303233353b757365725f6578707c733a313a2230223b757365725f677275705f69647c733a313a2232223b757365725f69647c733a353a2261646d696e223b6e616d617c733a31353a224d7568616d6164204b686461666679223b6c6576656c7c733a353a2261646d696e223b),
+('mbqbtuelph43el1ohha6t00mpnvdljmn', '::1', 1717924358, 0x5f5f63695f6c6173745f726567656e65726174657c693a313731373932343335383b757365725f69647c733a353a2261646d696e223b6e616d617c733a31353a224d7568616d6164204b686461666679223b6c6576656c7c733a353a2261646d696e223b),
+('mjpg4869qo0i8ttjdikgqu39outocadr', '::1', 1717641765, 0x5f5f63695f6c6173745f726567656e65726174657c693a313731373634313736353b757365725f6578707c733a313a2230223b757365725f677275705f69647c733a313a2232223b),
+('oicbsa9i23qnc5jm9h7aosjkul42obui', '::1', 1717924985, 0x5f5f63695f6c6173745f726567656e65726174657c693a313731373932343938353b757365725f69647c733a313a2232223b757365725f6578707c733a313a2230223b757365725f677275705f69647c733a313a2231223b7465735f757365725f69647c733a31343a22656c736140676d61696c2e636f6d223b7465735f6e616d617c733a31313a2241737966666120456c7361223b7465735f67726f75707c733a363a22477261746973223b7465735f67726f75705f69647c733a313a2231223b),
+('r68i8ip8gjsqrdqf43ptg3slqq74m179', '::1', 1717925750, 0x5f5f63695f6c6173745f726567656e65726174657c693a313731373932353735303b),
+('smil9vebu9t1od2hs8i9v0kil7etvd4q', '::1', 1717923603, 0x5f5f63695f6c6173745f726567656e65726174657c693a313731373932333630333b);
 
 -- --------------------------------------------------------
 
@@ -211,7 +286,22 @@ INSERT INTO `soal` (`soal_id`, `soal_topik_id`, `soal_detail`, `soal_tipe`, `soa
 (7, 2, '<p>Perintah apa yang digunakan untuk membuat repositori baru di Git ?</p>\r\n', 1, '', 1, 1, 0, 0),
 (8, 2, '<p>Perintah Git apa yang digunakan untuk mengunggah perubahan lokal ke repositori jarak jauh ?</p>\r\n', 1, '', 1, 1, 0, 0),
 (9, 2, '<p>Apa fungsi dari perintah <em>git clone</em> ?</p>\r\n', 1, '', 1, 1, 0, 0),
-(10, 2, '<p>Bagaimana cara melihat riwayat commit di Git ?</p>\r\n', 1, '', 1, 1, 0, 0);
+(10, 2, '<p>Bagaimana cara melihat riwayat commit di Git ?</p>\r\n', 1, '', 1, 1, 0, 0),
+(11, 3, '<p>Apa kepanjangan dari CSS?</p>\r\n', 1, '', 1, 1, 0, 0),
+(12, 3, '<p>Bagaimana cara menulis selektor kelas (class selector) dalam CSS?</p>\r\n', 1, '', 1, 1, 0, 0),
+(13, 3, '<p>Properti CSS mana yang digunakan untuk mengatur warna teks?</p>\r\n', 1, '', 1, 1, 0, 0),
+(14, 3, '<p>Mana yang bukan bagian dari CSS Box Model?</p>\r\n', 1, '', 1, 1, 0, 0),
+(15, 3, '<p>Apa yang terjadi pada elemen dengan position: absolute;?</p>\r\n', 1, '', 1, 1, 0, 0),
+(16, 3, '<p>Apa tujuan utama dari Flexbox?</p>\r\n', 1, '', 1, 1, 0, 0),
+(17, 3, '<p>Mana yang merupakan contoh penggunaan media queries yang benar?</p>\r\n', 1, '', 1, 1, 0, 0),
+(18, 3, '<p>Apa perbedaan antara pseudo-class dan pseudo-element?</p>\r\n', 1, '', 1, 1, 0, 0),
+(19, 3, '<p>Bagaimana cara menetapkan warna latar belakang elemen menjadi merah menggunakan CSS?</p>\r\n', 1, '', 1, 1, 0, 0),
+(20, 3, '<p>Properti CSS mana yang bersifat &quot;inherited&quot;?</p>\r\n', 1, '', 1, 1, 0, 0),
+(21, 4, '<p>Apa kepanjangan dari PHP?</p>\r\n', 1, '', 1, 1, 0, 0),
+(22, 4, '<p>Bagaimana cara menampilkan teks &quot;Hello, World!&quot; di PHP?</p>\r\n', 1, '', 1, 1, 0, 0),
+(23, 4, '<p>Fungsi mana yang digunakan untuk menyertakan file di PHP?</p>\r\n', 1, '', 1, 1, 0, 0),
+(24, 4, '<p>Variable di PHP diawali dengan simbol apa?</p>\r\n', 1, '', 1, 1, 0, 0),
+(25, 4, '<p>Apa hasil dari kode berikut?</p>\r\n\r\n<blockquote>\r\n<p>$a = 10;</p>\r\n\r\n<p>$b = 2;</p>\r\n\r\n<p>echo $a % $b;</p>\r\n</blockquote>\r\n', 1, '', 1, 1, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -242,7 +332,11 @@ INSERT INTO `tes` (`tes_id`, `tes_nama`, `tes_detail`, `tes_results_to_users`, `
 (3, 'HTML', 'Materi mengenai HTML', 1, 1, 1.00, 0.00, 0.00, 5.00, 0),
 (4, 'Materi HTML', 'Materi mengenai HTML', 1, 1, 1.00, 0.00, 0.00, 5.00, 0),
 (5, 'Materi Git', 'Materi mengenai Git', 1, 1, 1.00, 0.00, 0.00, 5.00, 0),
-(6, 'Git', 'Materi mengenai Git', 1, 1, 1.00, 0.00, 0.00, 5.00, 0);
+(6, 'Git', 'Materi mengenai Git', 1, 1, 1.00, 0.00, 0.00, 5.00, 0),
+(7, 'CSS', 'Materi mengenai CSS', 1, 1, 1.00, 0.00, 0.00, 10.00, 0),
+(8, 'Materi CSS', 'Materi mengenai CSS', 1, 1, 1.00, 0.00, 0.00, 10.00, 0),
+(9, 'Materi PHP', 'Materi mengenai PHP', 1, 1, 1.00, 0.00, 0.00, 5.00, 0),
+(10, 'PHP', 'Materi mengenai PHP', 1, 1, 1.00, 0.00, 0.00, 5.00, 0);
 
 -- --------------------------------------------------------
 
@@ -263,9 +357,13 @@ INSERT INTO `tesgrup` (`tstgrp_tes_id`, `tstgrp_grup_id`) VALUES
 (2, 1),
 (3, 1),
 (6, 1),
+(7, 1),
+(10, 1),
 (1, 2),
 (4, 2),
-(5, 2);
+(5, 2),
+(8, 2),
+(9, 2);
 
 -- --------------------------------------------------------
 
@@ -340,12 +438,14 @@ CREATE TABLE `tes_topik_set` (
 --
 
 INSERT INTO `tes_topik_set` (`tset_id`, `tset_tes_id`, `tset_topik_id`, `tset_tipe`, `tset_difficulty`, `tset_jumlah`, `tset_jawaban`, `tset_acak_jawaban`, `tset_acak_soal`) VALUES
-(1, 1, 2, 0, 1, 5, 4, 1, 1),
-(2, 2, 1, 0, 1, 5, 4, 1, 1),
-(3, 3, 1, 0, 1, 5, 4, 1, 1),
-(4, 4, 1, 0, 1, 5, 4, 1, 1),
-(5, 5, 2, 0, 1, 5, 4, 1, 1),
-(6, 6, 2, 0, 1, 5, 4, 1, 1);
+(1, 8, 3, 0, 1, 10, 4, 1, 1),
+(2, 7, 3, 0, 1, 10, 4, 1, 1),
+(3, 6, 2, 0, 1, 5, 4, 1, 1),
+(4, 5, 2, 0, 1, 5, 4, 1, 1),
+(5, 4, 1, 0, 1, 5, 4, 1, 1),
+(6, 3, 1, 0, 1, 5, 4, 1, 1),
+(8, 9, 4, 0, 1, 5, 4, 1, 1),
+(9, 10, 4, 0, 1, 5, 4, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -383,7 +483,9 @@ CREATE TABLE `topik` (
 
 INSERT INTO `topik` (`topik_id`, `topik_modul_id`, `topik_nama`, `topik_detail`, `topik_aktif`) VALUES
 (1, 1, 'HTML', 'Materi mengenai HTML', 1),
-(2, 1, 'Git', 'Materi mengenai Git', 1);
+(2, 1, 'Git', 'Materi mengenai Git', 1),
+(3, 1, 'CSS', 'Materi mengenai CSS', 1),
+(4, 1, 'PHP', 'Materi mengenai PHP', 1);
 
 -- --------------------------------------------------------
 
@@ -400,6 +502,13 @@ CREATE TABLE `transaksi` (
   `status_transaksi` int(1) NOT NULL COMMENT '1. belum dibayar, 2. menunggu konfirmasi, 3. berhasil berlangganan',
   `bukti_pembayaran` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data for table `transaksi`
+--
+
+INSERT INTO `transaksi` (`id_transaksi`, `user_id`, `harga`, `tgl_berlangganan`, `tgl_berakhir`, `status_transaksi`, `bukti_pembayaran`) VALUES
+(1, 2, 35000, '2024-06-09', '2024-07-09', 3, 'bukti1.png');
 
 -- --------------------------------------------------------
 
@@ -444,39 +553,26 @@ CREATE TABLE `user_akses` (
 --
 
 INSERT INTO `user_akses` (`id`, `level`, `kode_menu`, `add`, `edit`) VALUES
-(254, 'operator-soal', 'modul-daftar', 1, 1),
-(255, 'operator-soal', 'modul-filemanager', 1, 1),
-(256, 'operator-soal', 'modul-import', 1, 1),
-(257, 'operator-soal', 'modul-soal', 1, 1),
-(258, 'operator-soal', 'modul-topik', 1, 1),
 (259, 'operator-tes', 'tes-hasil-operator', 1, 1),
 (260, 'operator-tes', 'tes-token', 1, 1),
-(481, 'admin', 'laporan-analisis-butir-soal', 1, 1),
-(482, 'admin', 'peserta-kartu', 1, 1),
-(483, 'admin', 'peserta-group', 1, 1),
-(484, 'admin', 'peserta-daftar', 1, 1),
-(485, 'admin', 'modul-daftar', 1, 1),
-(486, 'admin', 'tes-daftar', 1, 1),
-(487, 'admin', 'tool-backup', 1, 1),
-(488, 'admin', 'tes-evaluasi', 1, 1),
-(489, 'admin', 'tool-exportimport-soal', 1, 1),
-(490, 'admin', 'modul-filemanager', 1, 1),
-(491, 'admin', 'tes-hasil', 1, 1),
-(492, 'admin', 'peserta-import', 1, 1),
-(493, 'admin', 'modul-import', 1, 1),
-(494, 'admin', 'modul-import-word', 1, 1),
-(496, 'admin', 'user_level', 1, 1),
-(497, 'admin', 'user_menu', 1, 1),
-(498, 'admin', 'user_atur', 1, 1),
-(499, 'admin', 'user-zyacbt', 1, 1),
-(500, 'admin', 'laporan-rekap', 1, 1),
-(501, 'admin', 'modul-soal', 1, 1),
-(502, 'admin', 'tes-tambah', 1, 1),
-(503, 'admin', 'tes-token', 1, 1),
-(504, 'admin', 'modul-topik', 1, 1),
-(505, 'admin', 'transaksi', 1, 1),
-(506, 'admin', 'daftar_transaksi', 1, 1),
-(507, 'admin', 'riwayat_transaksi', 1, 1);
+(530, 'admin', 'peserta-kartu', 1, 1),
+(531, 'admin', 'peserta-group', 1, 1),
+(532, 'admin', 'peserta-daftar', 1, 1),
+(533, 'admin', 'daftar_transaksi', 1, 1),
+(534, 'admin', 'tool-backup', 1, 1),
+(535, 'admin', 'tool-exportimport-soal', 1, 1),
+(536, 'admin', 'peserta-import', 1, 1),
+(537, 'admin', 'user_level', 1, 1),
+(538, 'admin', 'user_menu', 1, 1),
+(539, 'admin', 'user_atur', 1, 1),
+(540, 'admin', 'user-zyacbt', 1, 1),
+(541, 'admin', 'riwayat_transaksi', 1, 1),
+(549, 'operator-soal', 'modul-daftar', 1, 1),
+(550, 'operator-soal', 'modul-filemanager', 1, 1),
+(551, 'operator-soal', 'modul-import', 1, 1),
+(552, 'operator-soal', 'modul-import-word', 1, 1),
+(553, 'operator-soal', 'modul-topik', 1, 1),
+(554, 'operator-soal', 'modul-soal', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -760,7 +856,7 @@ ALTER TABLE `cc_user`
 -- AUTO_INCREMENT for table `jawaban`
 --
 ALTER TABLE `jawaban`
-  MODIFY `jawaban_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `jawaban_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=97;
 
 --
 -- AUTO_INCREMENT for table `konfigurasi`
@@ -778,13 +874,13 @@ ALTER TABLE `modul`
 -- AUTO_INCREMENT for table `soal`
 --
 ALTER TABLE `soal`
-  MODIFY `soal_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `soal_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `tes`
 --
 ALTER TABLE `tes`
-  MODIFY `tes_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `tes_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `tes_soal`
@@ -802,7 +898,7 @@ ALTER TABLE `tes_token`
 -- AUTO_INCREMENT for table `tes_topik_set`
 --
 ALTER TABLE `tes_topik_set`
-  MODIFY `tset_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `tset_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `tes_user`
@@ -814,13 +910,13 @@ ALTER TABLE `tes_user`
 -- AUTO_INCREMENT for table `topik`
 --
 ALTER TABLE `topik`
-  MODIFY `topik_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `topik_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `id_transaksi` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `user`
@@ -832,7 +928,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `user_akses`
 --
 ALTER TABLE `user_akses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=508;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=555;
 
 --
 -- AUTO_INCREMENT for table `user_grup`
