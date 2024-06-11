@@ -14,13 +14,19 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-    <!-- <script src="<?= base_url('assets/') ?>sweetalert/package/dist/sweetalert2.all.min.js"></script> -->
-    <!-- <link rel="stylesheet" href="<?= base_url('assets/') ?>sweetalert/package/dist/sweetalert2.min.css"> -->
     <link href=" https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
     <!-- Font Awesome 6 Kit -->
     <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
+    <!--=== Theme Reset CSS ===-->
+    <link href="<?= base_url() ?>assets/css/faq/reset.css" rel="stylesheet">
+    <!--=== Main Style CSS ===-->
+    <link href="<?= base_url() ?>assets/css/faq/style.css" rel="stylesheet">
+    <!--=== Responsive CSS ===-->
+    <link href="<?= base_url() ?>assets/css/faq/responsive.css" rel="stylesheet">
+
+
 
     <title>CodeChamp | Layanan Kursus Online Web Development Berbahasa Indonesia</title>
     <link rel="icon" type="image/x-icon" href="<?= base_url('assets/'); ?>img/codechamplogo2.png">
@@ -39,7 +45,7 @@
             <div class="collapse navbar-collapse nav-colour" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= site_url('tes_dashboard'); ?>" style="cursor: pointer;">Kembali ke Halaman Dashboard</a>
+                        <a class="nav-link" href="<?= site_url('beranda'); ?>" style="cursor: pointer;">Kembali ke Halaman Dashboard</a>
                     </li>
                 </ul>
             </div>

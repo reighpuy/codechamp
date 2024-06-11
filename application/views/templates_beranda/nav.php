@@ -47,6 +47,9 @@
                         <a class="nav-link" href="#tentang">Tentang</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="<?= site_url('beranda/faq'); ?>">FAQ</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="cta text-decoration-none" href="<?= site_url('auth'); ?>">
                             <span class="my-auto">
                                 <span class="font-daftar-masuk">Masuk</span>

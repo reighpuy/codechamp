@@ -37,7 +37,7 @@
                                         <td class="pr-3">: <?= $email; ?></td>
                                     </tr>
                                     <tr>
-                                        <td class="pr-3">Email</td>
+                                        <td class="pr-3">Harga</td>
                                         <td class="pr-3">: IDR 35.000</td>
                                     </tr>
                                     <tr>
@@ -54,7 +54,7 @@
                             </div>
                             <?php if ($grp->user_grup_id == 1) { ?>
                                 <center><button type="submit" class="btn btn-sm btn-primary mt-3 float-center">
-                                    <i class="fa fa-money-bill"></i> Mulai Berlangganan
+                                    Mulai Berlangganan
                                 </button></center>
                             <?php } else {?>
                                 <center><button type="submit" class="btn btn-sm btn-primary mt-3 float-center" disabled>

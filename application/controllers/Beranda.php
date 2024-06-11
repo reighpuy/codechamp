@@ -15,4 +15,13 @@ class Beranda extends CI_Controller
         $this->load->view('templates_beranda/footer');
     }
 
+    public function faq() {
+
+        $data['judul'] = 'FAQ';
+
+        $this->load->view('templates_beranda/header_faq', $data);
+        $this->load->view('v_faq', $data);
+        // $this->load->view('templates_beranda/footer_faq');
+    }
+
 }
