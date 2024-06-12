@@ -30,6 +30,12 @@ class Tes_dashboard extends Tes_Controller
 		$data['group'] = $this->access_tes->get_group();
 		$data['url'] = $this->url;
 
+		$id = $this->access_tes->get_user_id();
+		$update_tipe = $this->db->query("SELECT * FROM cc_user WHERE user_id='$id'")->result();
+		$update_tipe = json_decode(json_encode($update_tipe), true);
+		$this->session->set_userdata('user_grup_id', $update_tipe[0]['user_grup_id']);
+		$this->session->set_userdata('tes_group', $update_tipe[0]['user_grup_id']);
+
 		$email = $this->access_tes->get_email();
 		$query_user = $this->user_model->get_by_kolom_limit('email_user', $email, 1);
 		if ($query_user->num_rows() > 0) {
@@ -57,6 +63,7 @@ class Tes_dashboard extends Tes_Controller
 					font-family: "Nunito", Helvetica, Arial, sans-serif;
 				}
 			</style>
+			<link rel="icon" href="<?= base_url('assets/'); ?>img/codechamplogo2.png">
 		</head>
 
 		<body></body>
@@ -69,7 +76,7 @@ class Tes_dashboard extends Tes_Controller
 				$tglbrkhir = date('Y-m-d', strtotime("+1 day", strtotime($result_trans->tgl_berakhir)));
 				$hariini = date('Y-m-d');
 				if ($hariini > $result_trans->tgl_berakhir) {
-		?>
+					?>
 					<script>
 						Swal({
 							title: 'Informasi Berlangganan',
@@ -79,7 +86,7 @@ class Tes_dashboard extends Tes_Controller
 							window.location = '<?= site_url('tes_dashboard') ?>';
 						}))
 					</script>;
-<?php
+					<?php
 					$datatrans = array(
 						'user_grup_id' => 1
 					);

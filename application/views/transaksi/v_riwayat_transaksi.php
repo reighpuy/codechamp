@@ -1,22 +1,31 @@
 <div class="container">
-	<!-- Content Header (Page header) -->
+    <!-- Content Header (Page header) -->
     <section class="content-header">
-    	<h1>
+        <h1>
             <span style="font-size: 24px; color: #bbb">Halo, </span>
-    		<?php if(!empty($nama)){ echo $nama; } ?>
+            <?php if (!empty($nama)) {
+                echo $nama;
+            } ?>
         </h1>
         <ol class="breadcrumb">
             <li><a href="<?= site_url('tes_dashboard'); ?>">Ruang materi</a></li>
             <li class="active">Riwayat Transaksi</li>
         </ol>
-	</section>
+    </section>
 
-	<!-- Main content -->
+    <?php if ($data_transaksi) { ?>
+        <a href="<?= site_url('berlangganan/pembayaran_print/'); ?>" target="_blank" class="btn btn-primary btn-sm" style="margin-left: 15px; margin-top: 5px;">Cetak Bukti Berlangganan</a>
+    <?php } else { ?>
+        <a href="<?= site_url('berlangganan/pembayaran_print/'); ?>" class="btn btn-primary btn-sm" style="margin-left: 15px; margin-top: 5px;" disabled>Cetak Bukti Berlangganan</a>
+    <?php } ?>
+
+    <!-- Main content -->
     <section class="content">
         <div class="box box-primary box-solid">
             <div class="box-header with-border">
-            <h3 class="box-title">Riwayat Transaksi</h3>
+                <h3 class="box-title">Riwayat Transaksi</h3>
             </div><!-- /.box-header -->
+
             <div class="box-body">
                 <table class="table table-bordered table-hover">
                     <thead>
@@ -27,7 +36,6 @@
                             <th width="20%">Tanggal Berakhir</th>
                             <th width="20%">Status Transaksi</th>
                             <th width="20%">Bukti Pembayaran</th>
-                            <th>Bukti Berlangganan</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -42,16 +50,13 @@
                                 <td><?= $trans->tgl_berakhir; ?></td>
                                 <?php if ($trans->status_transaksi == 1) { ?>
                                     <td>Belum Dibayar</td>
-                                    <td><a href="<?= site_url('berlangganan/konfirmasi_pembayaran/') . $trans->id_transaksi; ?>" class="btn btn-primary btn-xs">Kirim Bukti Pembayaran</a></td>
-                                    <td>-</td>
+                                    <td><a href="<?= site_url('berlangganan/konfirmasi_pembayaran/') . $trans->id_transaksi; ?>" class="btn btn-primary btn-sm">Kirim Bukti Pembayaran</a></td>
                                 <?php } else if ($trans->status_transaksi == 2) { ?>
                                     <td>Menunggu Konfirmasi</td>
                                     <td><a href="<?= base_url('assets/img/bukti_pembayaran/') . $trans->bukti_pembayaran; ?>" target="_blank"><img src="<?= base_url('assets/img/bukti_pembayaran/') . $trans->bukti_pembayaran; ?>" alt="Bukti Pembayaran" width="100" height="100"></a></td>
-                                    <td>-</td>
                                 <?php } else { ?>
                                     <td>Transaksi Selesai</td>
                                     <td><a href="<?= base_url('assets/img/bukti_pembayaran/') . $trans->bukti_pembayaran; ?>" target="_blank"><img src="<?= base_url('assets/img/bukti_pembayaran/') . $trans->bukti_pembayaran; ?>" alt="Bukti Pembayaran" width="100" height="100"></a></td>
-                                    <td><a href="<?= site_url('berlangganan/pembayaran_print/') . $trans->id_transaksi; ?>" target="_blank" class="btn btn-primary btn-xs">Cetak Bukti Berlangganan</a></td>
                                 <?php } ?>
                             </tr>
                         <?php endforeach; ?>

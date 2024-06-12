@@ -20,7 +20,7 @@
             <input type="hidden" name="tes-soal-nomor" id="tes-soal-nomor"  value="<?php if(!empty($tes_soal_nomor)){ echo $tes_soal_nomor; } ?>">
             <input type="hidden" name="tes-soal-jml" id="tes-soal-jml" value="<?php if(!empty($tes_soal_jml)){ echo $tes_soal_jml; } ?>">
             <input type="hidden" name="tes-soal-ragu" id="tes-soal-ragu" value="<?php if(!empty($tes_ragu)){ echo $tes_ragu; } ?>">
-    		<div class="box box-success box-solid">
+    		<div class="box box-primary box-solid">
                 <div class="box-header with-border">
                     <h3 class="box-title">Soal <span id="judul-soal"><?php if(!empty($tes_soal_nomor)){ echo 'ke '.$tes_soal_nomor; } ?></span></h3>
                 </div><!-- /.box-header -->
@@ -31,16 +31,16 @@
                 </div><!-- /.box-body -->
                 <div class="box-footer">
                     <button type="button" class="btn btn-default hide" id="btn-sebelumnya">Soal Sebelumnya</button>&nbsp;&nbsp;&nbsp;
-                    <div class="btn btn-warning" id="btn-ragu" onclick="ragu()">
+                    <!-- <div class="btn btn-warning" id="btn-ragu" onclick="ragu()">
                         <input type="checkbox" style="width:10px;height:10px;" name="btn-ragu-checkbox" id="btn-ragu-checkbox" <?php if(!empty($tes_ragu)){ echo "checked"; } ?> /> Ragu-ragu
-                    </div>&nbsp;&nbsp;&nbsp;
+                    </div>&nbsp;&nbsp;&nbsp; -->
                     <button type="button" class="btn btn-default" id="btn-selanjutnya">Soal Selanjutnya</button>
                 </div>
             </div><!-- /.box -->
         </form>
     	</div>
         <div class="row">
-            <div class="box box-success box-solid">
+            <div class="box box-primary box-solid">
                 <div class="box-header with-border">
                     <h3 class="box-title">Daftar Soal</h3>
                 </div><!-- /.box-header -->
@@ -81,8 +81,8 @@
                             </div>
 
                             <div class="form-group">
-                                <label>Keterangan Soal</label>
-                                <input type="text" class="form-control" id="hentikan-dijawab" name="hentikan-dijawab" readonly>
+                                <!-- <label>Keterangan Soal</label> -->
+                                <input type="hidden" class="form-control" id="hentikan-dijawab" name="hentikan-dijawab" readonly>
                             </div>
                             <div class="form-group">
                                 <div class="checkbox">

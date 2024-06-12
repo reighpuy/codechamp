@@ -1,11 +1,16 @@
+<?php $ci = &get_instance(); ?>
+
 <!DOCTYPE html>
 <html>
 
 <head>
   <meta charset="UTF-8">
-  <title><?php if (!empty($site_names)) {
-            echo $site_names;
-          } ?> | <?php echo $title; ?></title>
+  <title>
+    <?php if (!empty($site_names)) {
+      echo $site_names;
+    } ?> | <?php echo $title; ?>
+  </title>
+  <link rel="icon" href="<?= base_url('assets/'); ?>img/codechamplogo2.png">
   <!-- Tell the browser to be responsive to screen width -->
   <meta content='width=device-width, initial-scale=0.9, minimum-scale=0.1, maximum-scale=10, user-scalable=yes' name='viewport'>
   <meta name="description" content="Codechamp">
@@ -141,7 +146,7 @@
                 </a>
               </li>
               <!-- User Account Menu -->
-              <li class="dropdown user user-menu">
+              <li class="dropdown user user-menu" style="cursor: pointer;">
                 <!-- Menu Toggle Button -->
                 <?php foreach ($userinfo as $user) : ?>
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -164,10 +169,9 @@
                         echo 'User';
                       } ?>
                       <?php if (!empty($group)) {
-                        $ci = &get_instance();
-                        if ($ci->session->userdata('user_grup_id') == "1") {
+                        if ($user_grup_id == "1") {
                           echo '<br/><span style="color: lightgreen;">Tipe</span> : Gratis';
-                        } elseif ($ci->session->userdata('user_grup_id') == "2") {
+                        } elseif ($user_grup_id == "2") {
                           echo '<br/><span style="color: lightgreen;">Tipe</span> : Berlangganan';
                         } else {
                           echo '<br/><span style="color: lightgreen;">Tipe</span> : ?';

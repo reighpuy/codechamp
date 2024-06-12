@@ -32,14 +32,14 @@ class tes_soal_model extends CI_Model{
 
     function count_by_tesuser_dijawab($tesuser_id){
         $this->db->select('COUNT(*) AS hasil')
-                 ->where('tessoal_tesuser_id="'.$tesuser_id.'" AND tessoal_change_time IS NOT NULL')
+                 ->where('tessoal_tesuser_id="'.$tesuser_id.'"')
                  ->from($this->table);
         return $this->db->get();
     }
 
     function count_by_tesuser_blum_dijawab($tesuser_id){
         $this->db->select('COUNT(*) AS hasil')
-                 ->where('tessoal_tesuser_id="'.$tesuser_id.'" AND tessoal_change_time IS NUlL')
+                 ->where('tessoal_tesuser_id="'.$tesuser_id.'" AND tessoal_change_time IS NULL')
                  ->from($this->table);
         return $this->db->get();
     }

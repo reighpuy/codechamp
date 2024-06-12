@@ -5,18 +5,19 @@ class Berlangganan extends Tes_Controller
 {
 
     public function __construct()
-	{
-		parent::__construct();
+    {
+        parent::__construct();
         $this->load->model('user_model');
-	}
+    }
 
-    public function index() {
+    public function index()
+    {
 
         $email = $this->access_tes->get_email();
         $query_user = $this->user_model->get_by_kolom_limit('email_user', $email, 1);
-		if($query_user->num_rows()>0){
-			$id = $query_user->row()->user_id;
-		}
+        if ($query_user->num_rows() > 0) {
+            $id = $query_user->row()->user_id;
+        }
 
         $data['group'] = $this->user_model->get_usr($id);
 
@@ -24,79 +25,81 @@ class Berlangganan extends Tes_Controller
         $data['email'] = $this->access_tes->get_email();
 
         $data['tdydate'] = date('Y-m-d');
-		$data['next_due_date'] = date('Y-m-d', strtotime($data['tdydate'] . ' +30 days'));
+        $data['next_due_date'] = date('Y-m-d', strtotime($data['tdydate'] . ' +30 days'));
 
         $this->load->view('templates_beranda/nav_berlangganan');
         $this->load->view('v_berlangganan', $data);
         $this->load->view('templates_beranda/footer_berlangganan');
-
     }
 
-    function riwayat_transaksi() {
+    function riwayat_transaksi()
+    {
 
         $email = $this->access_tes->get_email();
         $query_user = $this->user_model->get_by_kolom_limit('email_user', $email, 1);
-		if($query_user->num_rows()>0){
-			$id = $query_user->row()->user_id;
-		}
+        if ($query_user->num_rows() > 0) {
+            $id = $query_user->row()->user_id;
+        }
         $data['nama'] = $this->access_tes->get_nama();
         $data['email'] = $this->access_tes->get_email();
 
         $data['data_transaksi'] = $this->user_model->get_transaksi_user($id);
 
-        $this->template->display_user('transaksi'.'/v_riwayat_transaksi', 'Riwayat Transaksi', $data);
-        
+        $this->template->display_user('transaksi' . '/v_riwayat_transaksi', 'Riwayat Transaksi', $data);
     }
 
-    function mulai_berlangganan() {
+    function mulai_berlangganan()
+    {
 
-		$email = $this->access_tes->get_email();
-		$query_user = $this->user_model->get_by_kolom_limit('email_user', $email, 1);
-		if($query_user->num_rows()>0){
-			$data['user_id'] = $query_user->row()->user_id;
-		}
+        $email = $this->access_tes->get_email();
+        $query_user = $this->user_model->get_by_kolom_limit('email_user', $email, 1);
+        if ($query_user->num_rows() > 0) {
+            $data['user_id'] = $query_user->row()->user_id;
+        }
 
-        ?>
+?>
         <script src="<?= base_url('assets/') ?>js/sweetalert2.all.min.js"></script>
+
         <head>
             <style>
                 body {
-                    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+                    font-family: "Nunito", Helvetica, Arial, sans-serif;
                 }
             </style>
         </head>
+
         <body></body>
         <?php
 
-		$tdydate = date('Y-m-d');
-		$next_due_date = date('Y-m-d', strtotime($tdydate. ' +30 days'));
-		$data['harga'] = 35000;
-		$data['tgl_berlangganan'] = $tdydate;
-		$data['tgl_berakhir'] = $next_due_date;
-		$data['status_transaksi'] = 1;
+        $tdydate = date('Y-m-d');
+        $next_due_date = date('Y-m-d', strtotime($tdydate . ' +30 days'));
+        $data['harga'] = 35000;
+        $data['tgl_berlangganan'] = $tdydate;
+        $data['tgl_berakhir'] = $next_due_date;
+        $data['status_transaksi'] = 1;
 
-		$this->db->insert('transaksi', $data);
+        $this->db->insert('transaksi', $data);
         ?>
-            <script>
-                Swal({
-                    title: 'Berlangganan',
-                    type: 'success',
-                    text: 'Anda berhasil memulai transaksi!\nSilahkan konfirmasi pembayaran anda.'
-                }).then((result => {
-                    window.location ='<?= site_url('berlangganan/riwayat_transaksi') ?>';
-                }))
-            </script>;
-        <?php
+        <script>
+            Swal({
+                title: 'Berlangganan',
+                type: 'success',
+                text: 'Anda berhasil memulai transaksi!\nSilahkan konfirmasi pembayaran anda.'
+            }).then((result => {
+                window.location = '<?= site_url('berlangganan/riwayat_transaksi') ?>';
+            }))
+        </script>;
+    <?php
 
-	}
+    }
 
     function pembayaran_print()
     {
         $email = $this->access_tes->get_email();
         $query_user = $this->user_model->get_by_kolom_limit('email_user', $email, 1);
-		if($query_user->num_rows()>0){
-			$id = $query_user->row()->user_id;
-		}
+        if ($query_user->num_rows() > 0) {
+            $id = $query_user->row()->user_id;
+        }
 
         $isi['nama'] = $this->access_tes->get_nama();
         $isi['email'] = $this->access_tes->get_email();
@@ -104,7 +107,7 @@ class Berlangganan extends Tes_Controller
         $isi['data_transaksi'] = $this->user_model->get_transaksi_user($id);
 
         $isi['judul'] = 'Bukti Berlangganan';
-        $this->template->display_user('transaksi'.'/v_berlangganan_print', 'Bukti Berlangganan', $isi);
+        $this->template->display_user('transaksi' . '/v_berlangganan_print', 'Bukti Berlangganan', $isi);
         // $this->load->view('transaksi/v_berlangganan_print', $isi);
     }
 
@@ -120,13 +123,13 @@ class Berlangganan extends Tes_Controller
         $this->load->view('templates_beranda/nav_berlangganan', $data);
         $this->load->view('v_konfirmasi_pembayaran', $data);
         $this->load->view('templates_beranda/footer');
-
     }
 
     public function konfirmasi_pembayaran_simpan()
     {
-        ?>
+    ?>
         <script src="<?= base_url('assets/') ?>js/sweetalert2.all.min.js"></script>
+
         <head>
             <style>
                 body {
@@ -134,6 +137,7 @@ class Berlangganan extends Tes_Controller
                 }
             </style>
         </head>
+
         <body></body>
         <?php
 
@@ -147,17 +151,17 @@ class Berlangganan extends Tes_Controller
         $this->load->library('upload', $config);
 
         if (!$this->upload->do_upload('bukti_pembayaran')) {
-            ?>
+        ?>
             <script>
                 Swal({
                     title: 'Gagal',
                     type: 'error',
                     text: 'Bukti Pembayaran gagal di-Upload!'
                 }).then((result => {
-                    window.location ='<?= site_url('berlangganan/konfirmasi_pembayaran/' . $id) ?>';
+                    window.location = '<?= site_url('berlangganan/konfirmasi_pembayaran/' . $id) ?>';
                 }))
             </script>;
-            <?php
+        <?php
             return;
         } else {
             $bukti_pembayaran = $this->upload->data('file_name');
@@ -181,12 +185,11 @@ class Berlangganan extends Tes_Controller
                 type: 'success',
                 text: 'Berhasil mengunggah bukti pembayaran!'
             }).then((result => {
-                window.location ='<?= site_url('berlangganan/riwayat_transaksi') ?>';
+                window.location = '<?= site_url('berlangganan/riwayat_transaksi') ?>';
             }))
         </script>;
-        <?php
+<?php
 
         // echo "<script>window.location='" . site_url('tes_dashboard') . "';</script>";
     }
-
 }

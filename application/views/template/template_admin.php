@@ -3,11 +3,12 @@
   <head>
     <meta charset="UTF-8">
     <title><?php if(!empty($site_names)){ echo $site_names; } ?> | <?php echo $title; ?></title>
+    <link rel="icon" href="<?= base_url('assets/'); ?>img/codechamplogo2.png">
     <!-- Tell the browser to be responsive to screen width -->
     <meta content='width=device-width, initial-scale=1, maximum-scale=10, user-scalable=yes' name='viewport'>
-	<meta name="description" content="Codechamp">
-	<meta name="keywords" content="Codechamp">
-	<meta name="author" content="Reighpuy">
+    <meta name="description" content="Codechamp">
+    <meta name="keywords" content="Codechamp">
+    <meta name="author" content="Reighpuy">
     <!-- Bootstrap 3.3.4 -->
     <link href="<?php echo base_url(); ?>public/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <!-- Font Awesome Icons -->

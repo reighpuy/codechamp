@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 function format_rupiah($rp)
 {
@@ -7,5 +7,3 @@ function format_rupiah($rp)
 
     return $rupiah;
 }
-
-?>
