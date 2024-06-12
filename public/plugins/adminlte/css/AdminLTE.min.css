@@ -662,6 +662,7 @@ a:focus {
 .main-header .navbar-custom-menu,
 .main-header .navbar-right {
   float: right;
+  cursor: pointer;
 }
 @media (max-width: 991px) {
   .main-header .navbar-custom-menu a,
@@ -807,6 +808,7 @@ a:focus {
   .navbar-custom-menu .navbar-nav {
     margin: 0;
     float: left;
+    cursor: pointer;
   }
   .navbar-custom-menu .navbar-nav > li > a {
     padding-top: 15px;
@@ -2053,7 +2055,7 @@ a:focus {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 .box.box-primary {
-  border-top-color: #3c8dbc;
+  border-top-color: #5548ed;
 }
 .box.box-info {
   border-top-color: #00c0ef;
