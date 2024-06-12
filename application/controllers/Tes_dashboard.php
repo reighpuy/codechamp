@@ -64,44 +64,44 @@ class Tes_dashboard extends Tes_Controller
 
 		// var_dump($data['transaksi']);
 		$result_trans = $this->user_model->get_transaksi_by_email($email);
-		// if ($result_trans->user_grup_id == 2) {
-		if ($result_trans->user_grup_id == "2") {
-			$tglbrkhir = date('Y-m-d', strtotime("+1 day", strtotime($result_trans->tgl_berakhir)));
-			$hariini = date('Y-m-d');
-			if ($hariini > $result_trans->tgl_berakhir) {
+		if ($data['transaksi']) {
+			if ($result_trans->user_grup_id == "2") {
+				$tglbrkhir = date('Y-m-d', strtotime("+1 day", strtotime($result_trans->tgl_berakhir)));
+				$hariini = date('Y-m-d');
+				if ($hariini > $result_trans->tgl_berakhir) {
 		?>
-				<script>
-					Swal({
-						title: 'Informasi Berlangganan',
-						type: 'warning',
-						text: 'Waktu berlangganan anda telah habis!'
-					}).then((result => {
-						window.location = '<?= site_url('tes_dashboard') ?>';
-					}))
-				</script>;
+					<script>
+						Swal({
+							title: 'Informasi Berlangganan',
+							type: 'warning',
+							text: 'Waktu berlangganan anda telah habis!'
+						}).then((result => {
+							window.location = '<?= site_url('tes_dashboard') ?>';
+						}))
+					</script>;
 <?php
-				$datatrans = array(
-					'user_grup_id' => 1
-				);
+					$datatrans = array(
+						'user_grup_id' => 1
+					);
 
-				$this->user_model->update('user_id', $user_id, $datatrans);
-				$update_tipe = $this->db->query("SELECT * FROM cc_user WHERE user_id='$user_id'")->result();
-				$update_tipe = json_decode(json_encode($update_tipe), true);
-				$this->session->set_userdata('user_grup_id', $update_tipe[0]['user_grup_id']);
-				$this->session->set_userdata('tes_group', $update_tipe[0]['user_grup_id']);
-				// $where_trans_id = array('id_transaksi' => $data['transaksi'][0]->id_transaksi);
-				// $this->user_model->hapus_data_transaksi($where_trans_id, 'transaksi');
+					$this->user_model->update('user_id', $user_id, $datatrans);
+					$update_tipe = $this->db->query("SELECT * FROM cc_user WHERE user_id='$user_id'")->result();
+					$update_tipe = json_decode(json_encode($update_tipe), true);
+					$this->session->set_userdata('user_grup_id', $update_tipe[0]['user_grup_id']);
+					$this->session->set_userdata('tes_group', $update_tipe[0]['user_grup_id']);
+					// $where_trans_id = array('id_transaksi' => $data['transaksi'][0]->id_transaksi);
+					// $this->user_model->hapus_data_transaksi($where_trans_id, 'transaksi');
+				} else {
+					// var_dump($data['transaksi'][0]->id_transaksi);
+					$this->template->display_tes($this->kelompok . '/tes_dashboard_view', 'Dashboard', $data);
+				}
 			} else {
-				// var_dump($data['transaksi'][0]->id_transaksi);
 				$this->template->display_tes($this->kelompok . '/tes_dashboard_view', 'Dashboard', $data);
 			}
 		} else {
+			// var_dump($data['transaksi']);
 			$this->template->display_tes($this->kelompok . '/tes_dashboard_view', 'Dashboard', $data);
 		}
-		// } else {
-		// 	// var_dump($data['transaksi']);
-		// 	$this->template->display_tes($this->kelompok . '/tes_dashboard_view', 'Dashboard', $data);
-		// }
 
 		// $this->template->display_tes($this->kelompok.'/tes_dashboard_view', 'Dashboard', $data);
 	}
